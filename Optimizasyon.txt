@@ -1,0 +1,21 @@
+Nesneleri bulmak için tag ile arama yap ve karşılaştırmak için CompareTag kullan.
+
+Oyunun hedeflediği FPS değerini belirle.
+Application.targetFrameRate
+
+Build alınacak platform IL2CPP destekliyorsa Mono yerine IL2CPP tercih et. 
+Player Settings > Other Settings > Configuration > Scripting Backend > IL2CPP
+
+Update çalışma aralığını gerekliliğe göre optimize et.
+if(Time.frameCount % 3 == 0)
+
+Konum ve rotasyon değerlerini değiştirirken global yerine local olarak kullan, alırken ise paren nesnenin pozisonu ve rotasyonu biliniyosa local kullan.
+
+Mümkün olduğunca SetParent kullanma.
+
+Mümkün olduğunca posizyon ve rotasyonu az kullan veya atama yaparak kullan.
+
+Posizyon ve rotasyon aynı anda değişiyorsa transform.SetPositionAndRotation kullan.
+
+Bir kodu sadece objenin Transform‘u değiştiyse çalıştırmak için Transform’un hasChanged değeri true olduğunda çalıştır ve hasChanged’i false yap çünkü Unity bu değeri kendisi false yapmaz.
+
