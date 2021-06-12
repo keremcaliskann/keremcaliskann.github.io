@@ -9,6 +9,10 @@
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 #main {margin-left: 5%;margin-right: 5%;margin-top:10%}
+@media only screen and (max-width: 800px) {h1{font-size: 34px} h3{font-size: 22px}}
+@media only screen and (max-width: 700px) {h1{font-size: 32px} h3{font-size: 20px}}
+@media only screen and (max-width: 600px) {h1{font-size: 30px} h3{font-size: 18px}}
+@media only screen and (max-width: 500px) {h1{font-size: 28px} h3{font-size: 16px}}
 button,a {margin-left: 5px;margin-rigt: 5px}
 </style>
 <body class="w3-black">
@@ -17,8 +21,8 @@ button,a {margin-left: 5px;margin-rigt: 5px}
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
   <header class="w3-container w3-padding-16 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo">KEREM ÇALIŞKAN</h1>
-    <h3>Software Engineer - Game Developer</h2>
+    <h1>KEREM ÇALIŞKAN</h1>
+    <h3>Software Engineer - Game Developer</h3>
     <a href="mailto:kerem.caliskan@yahoo.com"><p>kerem.caliskan@yahoo.com</p></a>
     <hr style="width:100%" class="w3-opacity">
     <br>
@@ -28,15 +32,15 @@ button,a {margin-left: 5px;margin-rigt: 5px}
   </header>
   
   <div class="w3-center w3-padding-16">
-    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+    <a href="/about"><button class="w3-button w3-light-grey w3-padding-large w3-section">
       About
-    </button>
-    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+    </button></a>
+    <a href="/resume"><button class="w3-button w3-light-grey w3-padding-large w3-section">
       Resume
-    </button>
-    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+    </button></a>
+    <a href="/portfolio"><button class="w3-button w3-light-grey w3-padding-large w3-section">
       Portfolio
-    </button>
+    </button></a>
   </div>
     
     <!-- Footer -->
