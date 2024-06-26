@@ -35,6 +35,10 @@ const data = [
         title: "Water Balloon Run",
         link: "https://play.google.com/store/apps/details?id=com.ToonGames.WaterBalloonRun",
     },
+    {
+        title: "Clean Shooting",
+        link: "https://apps.apple.com/us/app/clean-shooting/id6448937920",
+    },
     { 
         title: "Merge Car Convoy!", 
         link: "https://play.google.com/store/apps/details?id=com.honeycomb.mergeconvoy",
