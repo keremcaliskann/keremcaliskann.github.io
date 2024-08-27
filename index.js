@@ -1,3 +1,15 @@
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+    // Store
+    let visitorCount = parseInt( localStorage.getItem("visitorCount"))+1;
+
+    localStorage.setItem("visitorCount", visitorCount);
+    // Retrieve
+    document.getElementById("visitorCounter").innerText = "Visitor Count : " + visitorCount;
+  } else {
+    document.getElementById("visitorCounter").textContent = "Sorry, your browser does not support Web Storage...";
+  }
+
 function populateContent(item) {
 
     const li = document.createElement('li');
