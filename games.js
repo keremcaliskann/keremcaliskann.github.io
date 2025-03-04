@@ -8,7 +8,7 @@ const data = [
         link: "https://apps.apple.com/tr/app/weapon-heroes/id6740763431?l=tr",
     },
     { 
-        title: "Survivor Run!",
+        title: "Survivor Run",
         link: "https://apps.apple.com/tr/app/survivor-run/id6736976641?l=tr",
     },
     { 
