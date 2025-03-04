@@ -4,6 +4,18 @@ const data = [
         link: "https://play.google.com/store/apps/details?id=com.bp.bulletevolve",
     },
     { 
+        title: "Weapon Heroes",
+        link: "https://apps.apple.com/tr/app/weapon-heroes/id6740763431?l=tr",
+    },
+    { 
+        title: "Survivor Run!",
+        link: "https://apps.apple.com/tr/app/survivor-run/id6736976641?l=tr",
+    },
+    { 
+        title: "Skeleton Run",
+        link: "https://apps.apple.com/tr/app/warfare-evolution/id6636494108?l=tr",
+    },
+    { 
         title: "Join The Jelly",
         link: "https://play.google.com/store/apps/details?id=com.ToonGames.JoinTheJelly",
     },
