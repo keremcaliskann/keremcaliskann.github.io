@@ -1,297 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KC - KEREM CALISKAN</title>
-
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./images/logo_black.png">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="style.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-circle">
-          <img src="./images/me.jpg" alt="Kerem Çalışkan" width="120">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Kerem Çalışkan">Kerem Çalışkan</h1>
-
-          <p class="title">Software Engineer</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-            <a href="mailto:kerem.caliskan@yahoo.com" class="contact-link" style="color: inherit;">
-              <div class="icon-box">
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-            </a>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:kerem.caliskan@yahoo.com" class="contact-link">kerem.caliskan@yahoo.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-            <a href="tel:+905422475952" class="contact-link" style="color: inherit;">
-              <div class="icon-box">
-                <ion-icon name="phone-portrait-outline"></ion-icon>
-              </div>
-            </a>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+905422475952" class="contact-link">+90 (542) 247-5952</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-            <a href="Resume.pdf" class="contact-link" style="color: inherit;" target="_blank">
-              <div class="icon-box">
-                <ion-icon name="document-text"></ion-icon>
-              </div>
-            </a>
-
-            <div class="contact-info">
-              <p class="contact-title">Resume</p>
-
-              <div class="contact-item">
-                <a href="Resume.pdf" class="contact-link" target="_blank">
-                  DOWNLOAD
-                </a>
-              </div>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://github.com/keremcaliskann" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/keremcaliskan" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-          
-        </ul>
-
-        <br>
-            <p style="color: var(--white-2); text-align: center; font-size: 12px;" id="visitorCounter"></p>
-
-      </div>
-      
-    </aside>
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <!--
-        - #PORTFOLIO
-        -->
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="project-list"id="item">
-
-            <script src="https://unpkg.com/read-excel-file@5.x/bundle/read-excel-file.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
-
-            <script src="games.js"></script> 
-            <script type="module" src="index.js"></script>
-
-          </ul>
-
-        </section>
-
-        <!--
-        - #RESUME
-        -->
-
-        <br>
-        <br>
-
-         <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            Hello, I am Kerem :)
-          </p>
-
-          <p>
-            I am Software Engineer specializing as a Unity Developer with 3+ years of experience in mobile game development. I am proficient in C#, with a track record of contributing to all phases of game development, from design to deployment.
-          </p>
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Duzce University</h4>
-
-              <span>2017 — 2023</span>
-
-              <p class="timeline-text">
-                Computer Engineering
-              </p>
-
-              <span>2016 — 2017</span>
-
-              <p class="timeline-text">
-                Forign Languages (English)
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Toon Games - Unity Developer</h4>
-
-              <span>2023/08 — Present</span>
-
-              <p class="timeline-text">Actively participated in game design and development processes.</p>
-              <p class="timeline-text">Developed game mechanics and features using Unity.</p>
-              <p class="timeline-text">Participated in the game publishing process, including testing, quality assurance, and deployment.</p>
-
-            </li>
-
-          </ol>
-          
-          
-          <br>
-          <br>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Lecten - Unity Developer</h4>
-
-              <span>2021/10 — 2023/08</span>
-
-              <p class="timeline-text">Worked as a full-time game developer on multiple projects.</p>
-              <p class="timeline-text">Developed hyper-casual games for various mobile devices using Unity.</p>
-              <p class="timeline-text">Designed and implemented user interfaces, animations, and levels.</p>
-
-
-            </li>
-
-          </ol>
-
-        </section>
-
-    </div>
-
-  </main>
-
-  <!--
-    - ionicon link
-  -->
-
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
-</html>
+<!doctype html><head><title>Kerem Caliskan Case</title><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><style>body,
+    html {
+      margin: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      overflow: hidden;
+    }
+
+    body {
+      background: #1e1e37;
+    }
+
+    #logo {
+      width: 100%;
+      max-width: 150px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    #bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      z-index: -1;
+      background: url('./assets/core/pattern.png') repeat center center fixed;
+    }</style></head><body><div id="bg"></div><img id="logo" src="./assets//core/logo_white.png" alt="loading"><script>document.addEventListener('contextmenu', event => event.preventDefault());</script><script defer="defer" src="vendor.c300a504ad470f55c4bb.js"></script><script defer="defer" src="main.ed11faeccfc0990d92da.js"></script></body>
