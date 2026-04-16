@@ -1,5 +1,6 @@
 import { database } from "/src/firebase-config.js";
-import { collection, getDocs } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-firestore.js";
+import { collection, getDocs } from "firebase/firestore";
+import cardTemplate from './product.html?raw';
 
 // HTML Elementlerini Seçelim
 const spinner = document.getElementById('loading-spinner');
@@ -8,7 +9,6 @@ const searchInput = document.getElementById('searchInput');
 
 // Ürünleri hafızada tutacağımız dizi (Filtreleme için gerekli)
 let allProducts = [];
-let cardTemplate = "";
 
 // 1. Firebase'den Verileri Çek
 async function fetchProducts() {
@@ -34,14 +34,6 @@ async function fetchProducts() {
     }
 }
 
-async function getTemplate() {
-    if (!cardTemplate) {
-        const response = await fetch('./product.html');
-        cardTemplate = await response.text();
-    }
-    return cardTemplate;
-}
-
 // 2. Ürünleri HTML'e Çevirip Ekrana Bas
 async function renderProducts(productsToRender) {
     // Önce grid'in içini temizle
@@ -53,7 +45,7 @@ async function renderProducts(productsToRender) {
         return;
     }
 
-    const templateData = await getTemplate();
+    const templateData = cardTemplate;
 
     // Her bir ürün için HTML kartı oluştur
     const productsHTML = productsToRender.map(product => {
