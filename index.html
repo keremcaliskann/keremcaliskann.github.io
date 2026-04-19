@@ -1,297 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KC - KEREM CALISKAN</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./images/logo_black.png">
+    <title>KC</title>
+
+
+
 
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="style.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" crossorigin src="/assets/index-B2lKAKxT.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CuMPhtBh.css">
 </head>
+<body class="d-flex flex-column min-vh-100 bg-light">
 
-<body>
-
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-circle">
-          <img src="./images/me.jpg" alt="Kerem Çalışkan" width="120">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Kerem Çalışkan">Kerem Çalışkan</h1>
-
-          <p class="title">Software Engineer</p>
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm sticky-top py-3 px-3 px-md-5">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold fs-4 text-dark" href="/">KEREM<span class="text-primary">.</span></a>
+    
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-3 mt-3 mt-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary fw-medium" href="/About">Hakkımda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary fw-medium" href="/Projects">Projeler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary fw-medium" href="/Products">Ürünler</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-            <a href="mailto:kerem.caliskan@yahoo.com" class="contact-link" style="color: inherit;">
-              <div class="icon-box">
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-            </a>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:kerem.caliskan@yahoo.com" class="contact-link">kerem.caliskan@yahoo.com</a>
+    </nav>
+    <!-- <section class="hero-banner text-center mb-5">
+        <div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
+            <div class="container-fluid py-5">
+                <h1 class="display-3 fw-bold mb-3">Yaratıcı Çözümler, Dijital Deneyimler</h1>
+                <p class="lead mb-4">Web geliştirme, 3D tasarım ve otomotiv tutkusunu birleştiren benzersiz projelerimi
+                    keşfedin.</p>
+                <a href="#projeler" class="btn btn-light btn-lg px-5 py-3 fs-5 fw-medium">Projelerimi Gör</a>
             </div>
+        </div>
+    </section> -->
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm border border-light text-center">
 
-          </li>
+                    <h2 class="display-6 fw-bold mb-4 text-dark">Merhaba, Ben Kerem</h2>
 
-          <li class="contact-item">
-            <a href="tel:+905422475952" class="contact-link" style="color: inherit;">
-              <div class="icon-box">
-                <ion-icon name="phone-portrait-outline"></ion-icon>
-              </div>
-            </a>
+                    <div class="text-secondary fs-5 lh-lg">
+                        <p>Yazılım ve oyun geliştirme dünyasında aktif olarak yer alan bir geliştiriciyim. <strong
+                                class="text-dark">C#, ASP.NET Core</strong> ve modern web teknolojileri ile projeler
+                            üretiyorum.</p>
 
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
+                        <div class="d-flex align-items-center justify-content-center my-4 text-primary opacity-75">
+                            <hr class="w-25 border-secondary opacity-25">
+                            <i class="fas fa-code mx-3 fs-5"></i>
+                            <hr class="w-25 border-secondary opacity-25">
+                        </div>
 
-              <a href="tel:+905422475952" class="contact-link">+90 (542) 247-5952</a>
+                        <p>Teknik projelerin yanı sıra <strong class="text-dark">3D modelleme, 3D baskı</strong> ve
+                            otomotiv modifikasyonları gibi farklı alanlarda yaratıcı süreçlerle ilgileniyorum. Dijital
+                            dünyadaki deneyimlerimi ve projelerimi bu platformda paylaşıyorum.</p>
+                    </div>
+
+                    <div class="mt-4">
+                        <a href="/hakkimda" class="btn btn-outline-dark px-4 py-2 rounded-pill fw-medium">Daha Fazla
+                            Bilgi</a>
+                    </div>
+
+                </div>
             </div>
+        </div>
+    </main>
 
-          </li>
-
-          <li class="contact-item">
-            <a href="Resume.pdf" class="contact-link" style="color: inherit;" target="_blank">
-              <div class="icon-box">
-                <ion-icon name="document-text"></ion-icon>
-              </div>
-            </a>
-
-            <div class="contact-info">
-              <p class="contact-title">Resume</p>
-
-              <div class="contact-item">
-                <a href="Resume.pdf" class="contact-link" target="_blank">
-                  DOWNLOAD
-                </a>
-              </div>
+    <footer id="footer-container" class="bg-dark text-white pt-5 pb-3 mt-auto">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <a class="navbar-brand fw-bold fs-4 text-white" href="/">KEREM<span class="text-primary">.</span></a>
+                    <p class="text-secondary mt-2">Yazılım, tasarım ve üretim alanındaki deneyimlerimi paylaştığım kişisel
+                        portfolyo ve satış platformu.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0 d-flex flex-column align-items-center align-items-md-start">
+                    <h5 class="text-uppercase fw-bold mb-3">Hızlı Linkler</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/hakkimda" class="text-secondary text-decoration-none hover-white">Hakkımda</a></li>
+                        <li><a href="/projeler" class="text-secondary text-decoration-none hover-white">Projeler</a></li>
+                        <li><a href="/urunler" class="text-secondary text-decoration-none hover-white">Ürünler</a></li>
+                        <li><a href="/iletisim" class="text-secondary text-decoration-none hover-white">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-uppercase fw-bold mb-3">Takip Et</h5>
+                    <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                        <a href="#" class="text-secondary fs-4 hover-white"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-secondary fs-4 hover-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-secondary fs-4 hover-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-secondary fs-4 hover-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p class="text-secondary mt-3">E-posta: iletisim@kerem.dev</p>
+                </div>
             </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://github.com/keremcaliskann" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/keremcaliskan" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-          
-        </ul>
-
-        <br>
-            <p style="color: var(--white-2); text-align: center; font-size: 12px;" id="visitorCounter"></p>
-
-      </div>
-      
-    </aside>
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <!--
-        - #PORTFOLIO
-        -->
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="project-list"id="item">
-
-            <script src="https://unpkg.com/read-excel-file@5.x/bundle/read-excel-file.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
-
-            <script src="games.js"></script> 
-            <script type="module" src="index.js"></script>
-
-          </ul>
-
-        </section>
-
-        <!--
-        - #RESUME
-        -->
-
-        <br>
-        <br>
-
-         <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            Hello, I am Kerem :)
-          </p>
-
-          <p>
-            I am Software Engineer specializing as a Unity Developer with 3+ years of experience in mobile game development. I am proficient in C#, with a track record of contributing to all phases of game development, from design to deployment.
-          </p>
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+            <hr class="border-secondary my-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="text-secondary mb-0">&copy; 2024 KEREM. Tüm hakları saklıdır.</p>
+                </div>
             </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Duzce University</h4>
-
-              <span>2017 — 2023</span>
-
-              <p class="timeline-text">
-                Computer Engineering
-              </p>
-
-              <span>2016 — 2017</span>
-
-              <p class="timeline-text">
-                Forign Languages (English)
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Toon Games - Unity Developer</h4>
-
-              <span>2023/08 — Present</span>
-
-              <p class="timeline-text">Actively participated in game design and development processes.</p>
-              <p class="timeline-text">Developed game mechanics and features using Unity.</p>
-              <p class="timeline-text">Participated in the game publishing process, including testing, quality assurance, and deployment.</p>
-
-            </li>
-
-          </ol>
-          
-          
-          <br>
-          <br>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Lecten - Unity Developer</h4>
-
-              <span>2021/10 — 2023/08</span>
-
-              <p class="timeline-text">Worked as a full-time game developer on multiple projects.</p>
-              <p class="timeline-text">Developed hyper-casual games for various mobile devices using Unity.</p>
-              <p class="timeline-text">Designed and implemented user interfaces, animations, and levels.</p>
-
-
-            </li>
-
-          </ol>
-
-        </section>
-
-    </div>
-
-  </main>
-
-  <!--
-    - ionicon link
-  -->
-
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+        </div>
+    </footer>
 </body>
+
 
 </html>
