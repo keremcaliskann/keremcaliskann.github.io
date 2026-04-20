@@ -20,6 +20,18 @@ const pageData = {
 
 export default defineConfig({
   base: '/',
+  build: {
+    outDir: 'dist',
+    rollupOptions: {
+      input: {
+        main: './index.html',
+        about: './about.html',
+        projects: './projects.html',
+        products: './products.html',
+        admin: './admin.html'
+      }
+    }
+  },
   plugins: [
     handlebars({
       partialDirectory: resolve(__dirname, 'public', 'partials'),
