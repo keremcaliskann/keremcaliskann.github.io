@@ -19,14 +19,15 @@ const pageData = {
 };
 
 export default defineConfig({
+  base: '/',
   plugins: [
     handlebars({
       partialDirectory: resolve(__dirname, 'public', 'partials'),
-      
+
       // 2. Vite sayfayı derlerken bu fonksiyon çalışır
       context(pagePath) {
         // Eğer o sayfa için veri tanımladıysak onu gönder, yoksa varsayılan bir veri gönder
-        return pageData[pagePath] || { title: 'Kerem Portfolyo'};
+        return pageData[pagePath] || { title: 'Kerem Portfolyo' };
       },
     }),
   ],
