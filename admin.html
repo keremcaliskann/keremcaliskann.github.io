@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+{{>head}}
+
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <div class="container-fluid">
+        <div class="row min-vh-100">
+
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-white shadow-sm border-end collapse">
+                <div class="position-sticky pt-4">
+                    <div class="text-center mb-4 px-3">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-2"
+                            style="width: 60px; height: 60px; font-size: 1.5rem;">
+                            <i class="bi bi-person"></i>
+                        </div>
+                    </div>
+
+                    <ul class="nav flex-column gap-1 px-3" id="sidebarMenu">
+                        <li class="nav-item">
+                            <a class="active nav-link menu-link bg-primary text-white rounded px-3 py-2"
+                                data-target="dashboard-content">
+                                <i class="bi bi-house-door me-2"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link text-dark rounded px-3 py-2" data-target="projects-content">
+                                <i class="bi bi-controller me-2"></i> Projects
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link text-dark rounded px-3 py-2" data-target="products-content">
+                                <i class="bi bi-briefcase me-2"></i> Products
+                            </a>
+                        </li>
+                    </ul>
+
+                    <hr class="my-4 mx-3">
+
+                    <ul class="nav flex-column px-3">
+                        <li class="nav-item">
+                            <a class="nav-link text-danger rounded px-3 py-2" href="/">
+                                <i class="bi bi-box-arrow-left me-2"></i> Çıkış Yap
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+
+                {{>admin_dashboard}}
+
+                {{>admin_projects}}
+
+                {{>admin_products}}
+
+            </main>
+
+        </div>
+    </div>
+
+
+</body>
+
+<script type="module" src="./src/admin.js"></script>
+
+</html>

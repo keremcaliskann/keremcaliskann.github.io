@@ -1,81 +1,70 @@
 <!DOCTYPE html>
 <html lang="tr">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{>head}}
 
-    <title>KC</title>
-
-
-
-
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script type="module" crossorigin src="/assets/index-B2lKAKxT.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-CuMPhtBh.css">
-</head>
 <body class="d-flex flex-column min-vh-100 bg-light">
 
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm sticky-top py-3 px-3 px-md-5">
-        <div class="container-fluid">
-            <a class="navbar-brand fw-bold fs-4 text-dark" href="/">KEREM<span class="text-primary">.</span></a>
-    
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav align-items-center gap-3 mt-3 mt-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary fw-medium" href="/About">Hakkımda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary fw-medium" href="/Projects">Projeler</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary fw-medium" href="/Products">Ürünler</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- <section class="hero-banner text-center mb-5">
-        <div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
-            <div class="container-fluid py-5">
-                <h1 class="display-3 fw-bold mb-3">Yaratıcı Çözümler, Dijital Deneyimler</h1>
-                <p class="lead mb-4">Web geliştirme, 3D tasarım ve otomotiv tutkusunu birleştiren benzersiz projelerimi
-                    keşfedin.</p>
-                <a href="#projeler" class="btn btn-light btn-lg px-5 py-3 fs-5 fw-medium">Projelerimi Gör</a>
-            </div>
-        </div>
-    </section> -->
+    {{>navbar}}
+
+    {{>banner}}
+
     <main class="container my-5">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm border border-light text-center">
+            <div class="col-12 col-lg-10 col-xl-9">
+                <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm border border-light">
 
-                    <h2 class="display-6 fw-bold mb-4 text-dark">Merhaba, Ben Kerem</h2>
+                    <div
+                        class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-4 mb-4 text-start">
 
-                    <div class="text-secondary fs-5 lh-lg">
-                        <p>Yazılım ve oyun geliştirme dünyasında aktif olarak yer alan bir geliştiriciyim. <strong
-                                class="text-dark">C#, ASP.NET Core</strong> ve modern web teknolojileri ile projeler
-                            üretiyorum.</p>
-
-                        <div class="d-flex align-items-center justify-content-center my-4 text-primary opacity-75">
-                            <hr class="w-25 border-secondary opacity-25">
-                            <i class="fas fa-code mx-3 fs-5"></i>
-                            <hr class="w-25 border-secondary opacity-25">
+                        <div class="d-flex align-items-center gap-4">
+                            <div class="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center fs-3 fw-bold flex-shrink-0"
+                                style="width:72px;height:72px">K</div>
+                            <div>
+                                <h1 class="fw-bold mb-1 fs-2">Merhaba, ben Kerem.</h1>
+                                <p class="text-muted mb-0 fw-medium">Developer · Designer · Maker</p>
+                            </div>
                         </div>
 
-                        <p>Teknik projelerin yanı sıra <strong class="text-dark">3D modelleme, 3D baskı</strong> ve
-                            otomotiv modifikasyonları gibi farklı alanlarda yaratıcı süreçlerle ilgileniyorum. Dijital
-                            dünyadaki deneyimlerimi ve projelerimi bu platformda paylaşıyorum.</p>
+                        <div class="d-flex flex-wrap justify-content-md-end gap-2" style="max-width: 320px;">
+                            <span class="badge rounded-pill bg-dark fs-6 fw-normal px-3 py-2">
+                                <i class="bi bi-controller me-1"></i> Game Dev
+                            </span>
+                            <span class="badge rounded-pill bg-dark fs-6 fw-normal px-3 py-2">
+                                <i class="bi bi-code-slash me-1"></i> Web Dev
+                            </span>
+                            <span class="badge rounded-pill bg-secondary fs-6 fw-normal px-3 py-2">
+                                <i class="bi bi-cpu me-1"></i> Simulation
+                            </span>
+                            <span class="badge rounded-pill bg-secondary fs-6 fw-normal px-3 py-2">
+                                <i class="bi bi-vector-pen me-1"></i> Design
+                            </span>
+                            <span class="badge rounded-pill bg-secondary fs-6 fw-normal px-3 py-2">
+                                <i class="bi bi-box me-1"></i> 3D Printing
+                            </span>
+                        </div>
+
                     </div>
 
-                    <div class="mt-4">
-                        <a href="/hakkimda" class="btn btn-outline-dark px-4 py-2 rounded-pill fw-medium">Daha Fazla
-                            Bilgi</a>
+                    <hr class="my-4" />
+
+                    <p class="fs-4 text-dark text-center fw-normal mb-5 lh-base">
+                        Fikirleri hem dijital hem de fiziksel olarak hayata geçiriyorum.
+                        <strong>Modern web uygulamaları</strong> ve <strong>oyunlar</strong> geliştiriyor;
+                        aynı zamanda <strong>3D tasarımlar</strong> yapıyor ve bunları 3D baskı ile
+                        üreterek <strong>somut ürünlere</strong> dönüştürüyorum.
+                    </p>
+
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="about.html" class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                            <i class="bi bi-person me-2"></i>Hakkımda
+                        </a>
+                        <a href="projects.html" class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                            <i class="bi bi-folder me-2"></i>Projelerim
+                        </a>
+                        <a href="products.html" class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                            <i class="bi bi-bag me-2"></i>Ürünlerim
+                        </a>
                     </div>
 
                 </div>
@@ -83,43 +72,10 @@
         </div>
     </main>
 
-    <footer id="footer-container" class="bg-dark text-white pt-5 pb-3 mt-auto">
-        <div class="container">
-            <div class="row text-center text-md-start">
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <a class="navbar-brand fw-bold fs-4 text-white" href="/">KEREM<span class="text-primary">.</span></a>
-                    <p class="text-secondary mt-2">Yazılım, tasarım ve üretim alanındaki deneyimlerimi paylaştığım kişisel
-                        portfolyo ve satış platformu.</p>
-                </div>
-                <div class="col-md-4 mb-4 mb-md-0 d-flex flex-column align-items-center align-items-md-start">
-                    <h5 class="text-uppercase fw-bold mb-3">Hızlı Linkler</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="/hakkimda" class="text-secondary text-decoration-none hover-white">Hakkımda</a></li>
-                        <li><a href="/projeler" class="text-secondary text-decoration-none hover-white">Projeler</a></li>
-                        <li><a href="/urunler" class="text-secondary text-decoration-none hover-white">Ürünler</a></li>
-                        <li><a href="/iletisim" class="text-secondary text-decoration-none hover-white">İletişim</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="text-uppercase fw-bold mb-3">Takip Et</h5>
-                    <div class="d-flex gap-3 justify-content-center justify-content-md-start">
-                        <a href="#" class="text-secondary fs-4 hover-white"><i class="fab fa-github"></i></a>
-                        <a href="#" class="text-secondary fs-4 hover-white"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-secondary fs-4 hover-white"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-secondary fs-4 hover-white"><i class="fab fa-youtube"></i></a>
-                    </div>
-                    <p class="text-secondary mt-3">E-posta: iletisim@kerem.dev</p>
-                </div>
-            </div>
-            <hr class="border-secondary my-4">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="text-secondary mb-0">&copy; 2024 KEREM. Tüm hakları saklıdır.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    {{>footer}}
+
 </body>
-
+
+<script type="module" src="./src/index.js"></script>
 
 </html>
