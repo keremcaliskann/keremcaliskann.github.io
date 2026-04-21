@@ -55,13 +55,14 @@
 
                     <!-- Title -->
                     <div class="mb-3">
-                        <label class="form-label text-secondary small mb-1">Title</label>
+                        <label for="product-title" proclass="form-label text-secondary small mb-1">Title</label>
                         <input id="product-title" type="text" class="form-control rounded-3" required>
                     </div>
 
                     <!-- Description -->
                     <div class="mb-3">
-                        <label class="form-label text-secondary small mb-1">Description</label>
+                        <label for="product-description"
+                            class="form-label text-secondary small mb-1">Description</label>
                         <textarea id="product-description" class="form-control rounded-3" rows="3"
                             placeholder="Açıklama girin"></textarea>
                     </div>
@@ -72,15 +73,15 @@
                         <div class="input-group">
                             <span class="input-group-text border-end-0 bg-light">₺</span>
 
-                            <input type="number" id="product-price" name="product-price" class="form-control rounded-end-3" step="0.01"
-                                min="0" placeholder="0.00" required>
+                            <input type="number" id="product-price" name="product-price"
+                                class="form-control rounded-end-3" step="0.01" min="0" placeholder="0.00" required>
                         </div>
                     </div>
 
                     <!-- Dynamic Tag List -->
                     <div class="mb-3">
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <label class="form-label text-secondary small mb-0">Images</label>
+                            <label for="product-add-image" class="form-label text-secondary small mb-0">Images</label>
 
                             <button id="product-add-image" type="button"
                                 class="btn btn-outline-primary btn-sm rounded-pill px-3">

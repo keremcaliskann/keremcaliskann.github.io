@@ -48,7 +48,7 @@ function addImageInput(value = "") {
     wrapper.className = "input-group";
 
     wrapper.innerHTML = `
-        <input type="text" class="form-control rounded-3 product-tag-input" placeholder="Image Url..." value="${value}">
+        <input name="imageHolder" type="text" class="form-control rounded-3 product-tag-input" value="${value}">
         <button type="button" class="btn btn-outline-danger rounded-3 ms-2" onclick="this.parentElement.remove()">
             <i class="bi bi-trash"></i>
         </button>
