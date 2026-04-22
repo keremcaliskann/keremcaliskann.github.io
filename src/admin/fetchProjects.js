@@ -1,5 +1,5 @@
 import { database } from "/src/firebase-config.js";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query } from "firebase/firestore";
 import projectItem from '/src/projectItem.html?raw';
 
 const projectsTable = document.getElementById('projects-table');
@@ -7,6 +7,7 @@ let allProjects = [];
 // 1. Firebase'den Verileri Çek
 export async function fetchProjects() {
   try {
+    const q = query(collection(database, "projects"), orderBy("order", "asc"));
     const querySnapshot = await getDocs(collection(database, "projects")); // Firestore'daki koleksiyon adın
 
     // Gelen veriyi bizim kullanabileceğimiz bir diziye (array) çevir

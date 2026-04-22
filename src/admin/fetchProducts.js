@@ -1,5 +1,5 @@
 import { database } from "/src/firebase-config.js";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query } from "firebase/firestore";
 import productItem from '/src/productItem.html?raw';
 
 const productsTable = document.getElementById('products-table');
@@ -7,6 +7,7 @@ let allProducts = [];
 // 1. Firebase'den Verileri Çek
 export async function fetchProducts() {
   try {
+    const q = query(collection(database, "products"), orderBy("order", "asc"));
     const querySnapshot = await getDocs(collection(database, "products")); // Firestore'daki koleksiyon adın
 
     // Gelen veriyi bizim kullanabileceğimiz bir diziye (array) çevir
