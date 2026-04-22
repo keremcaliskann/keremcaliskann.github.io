@@ -1,7 +1,7 @@
 import { database } from "/src/firebase-config.js";
 import { collection, getDocs, addDoc, getDoc, deleteDoc, doc, updateDoc } from "firebase/firestore";
 
-const lastOrder = 0;
+let lastOrder = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
 
