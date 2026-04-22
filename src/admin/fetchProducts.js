@@ -1,5 +1,5 @@
 import { database } from "/src/firebase-config.js";
-import { collection, getDocs, query } from "firebase/firestore";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import productItem from '/src/productItem.html?raw';
 
 const productsTable = document.getElementById('products-table');
