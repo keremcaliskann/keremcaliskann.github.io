@@ -19,7 +19,7 @@ async function fetchProjects() {
         allProjects = querySnapshot.docs.map(doc => ({
             id: doc.id,
             ...doc.data()
-        }));
+        })).sort((a, b) => b.order - a.order);
 
         // Ürünleri ekrana bas
         renderProjects(allProjects);

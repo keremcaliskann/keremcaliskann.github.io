@@ -7,14 +7,13 @@ let allProducts = [];
 // 1. Firebase'den Verileri Çek
 export async function fetchProducts() {
   try {
-    const q = query(collection(database, "products"), orderBy("order", "desc"));
-    const querySnapshot = await getDocs(q); // Firestore'daki koleksiyon adın
+    const querySnapshot = await getDocs(collection(database, "projects")); // Firestore'daki koleksiyon adın
 
     // Gelen veriyi bizim kullanabileceğimiz bir diziye (array) çevir
     allProducts = querySnapshot.docs.map(doc => ({
       id: doc.id,
       ...doc.data()
-    }));
+    })).sort((a, b) => b.order - a.order);
 
     // Ürünleri ekrana bas
     renderProducts(allProducts);

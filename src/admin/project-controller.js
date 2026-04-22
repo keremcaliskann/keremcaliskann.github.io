@@ -17,14 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-document.getElementById("project-add").addEventListener("click", function (event) {
+document.getElementById("project-add").addEventListener("click", async function (event) {
     const projectsRef = collection(database, "projects");
     const snapshot = await getDocs(projectsRef);
     const newOrder = snapshot.size + 1;
 
     clearForm();
 
-    document.getElementById("product-order").textContent = newOrder;
+    document.getElementById("product-order").value = newOrder;
 });
 
 document.getElementById("project-form").addEventListener("submit", function (event) {
@@ -38,10 +38,11 @@ document.getElementById("project-add-image").addEventListener("click", function 
 
 function clearForm() {
     document.getElementById("project-form").reset();
+    document.getElementById("project-order").value = "-";
     document.getElementById("project-id").textContent = "-";
-    document.getElementById("project-title").textContent = "";
-    document.getElementById("project-description").textContent = "";
-    document.getElementById("project-link").textContent = "";
+    document.getElementById("project-title").value = "";
+    document.getElementById("project-description").value = "";
+    document.getElementById("project-link").value = "";
     document.getElementById("project-image-list").innerHTML = "";
     document.getElementById("project-isActiveLabel").textContent = "Active";
     document.getElementById('project-isActive').checked = true;
@@ -124,7 +125,7 @@ async function edit(id) {
 
             document.getElementById("project-id").textContent = project.id;
             document.getElementById("project-title").value = project.title;
-            document.getElementById("project-description").textContent = project.description;
+            document.getElementById("project-description").value = project.description;
             document.getElementById("project-link").value = project.link;
             document.getElementById("project-order").value = project.order;
 

@@ -17,14 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-document.getElementById("product-add").addEventListener("click", function (event) {
+document.getElementById("product-add").addEventListener("click", async function (event) {
     const projectsRef = collection(database, "products");
     const snapshot = await getDocs(projectsRef);
     const newOrder = snapshot.size + 1;
 
     clearForm();
 
-    document.getElementById("product-order").textContent = newOrder;
+    document.getElementById("product-order").value = newOrder;
 });
 
 document.getElementById("product-form").addEventListener("submit", function (event) {
@@ -38,10 +38,11 @@ document.getElementById("product-add-image").addEventListener("click", function 
 
 function clearForm() {
     document.getElementById("product-form").reset();
+    document.getElementById("product-order").value = "-";
     document.getElementById("product-id").textContent = "-";
-    document.getElementById("product-title").textContent = "";
-    document.getElementById("product-description").textContent = "";
-    document.getElementById("product-price").textContent = "";
+    document.getElementById("product-title").value = "";
+    document.getElementById("product-description").value = "";
+    document.getElementById("product-price").value = "";
     document.getElementById("product-image-list").innerHTML = "";
     document.getElementById("product-isActiveLabel").textContent = "Active";
     document.getElementById('product-isActive').checked = true;
@@ -124,7 +125,7 @@ async function edit(id) {
 
             document.getElementById("product-id").textContent = product.id;
             document.getElementById("product-title").value = product.title;
-            document.getElementById("product-description").textContent = product.description;
+            document.getElementById("product-description").value = product.description;
             document.getElementById("product-price").value = product.price;
             document.getElementById("product-order").value = product.order;
 
