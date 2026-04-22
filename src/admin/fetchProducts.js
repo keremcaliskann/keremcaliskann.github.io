@@ -8,7 +8,7 @@ let allProducts = [];
 export async function fetchProducts() {
   try {
     const q = query(collection(database, "products"), orderBy("order", "asc"));
-    const querySnapshot = await getDocs(collection(database, "products")); // Firestore'daki koleksiyon adın
+    const querySnapshot = await getDocs(q); // Firestore'daki koleksiyon adın
 
     // Gelen veriyi bizim kullanabileceğimiz bir diziye (array) çevir
     allProducts = querySnapshot.docs.map(doc => ({
