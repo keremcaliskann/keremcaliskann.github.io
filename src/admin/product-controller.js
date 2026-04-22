@@ -18,7 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.getElementById("product-add").addEventListener("click", function (event) {
+    const projectsRef = collection(database, "products");
+    const snapshot = await getDocs(projectsRef);
+    const newOrder = snapshot.size + 1;
+
     clearForm();
+
+    document.getElementById("product-order").textContent = newOrder;
 });
 
 document.getElementById("product-form").addEventListener("submit", function (event) {
@@ -65,7 +71,7 @@ function save() {
 
     const id = document.getElementById("product-id").textContent;
     const data = {
-        order: document.getElementById("product-order").value.trim(),
+        order: Number(document.getElementById("product-order").value.trim()) || 0,
         isActive: document.getElementById("product-isActive").checked,
         title: document.getElementById("product-title").value.trim(),
         description: document.getElementById("product-description").value.trim(),

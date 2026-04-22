@@ -18,7 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.getElementById("project-add").addEventListener("click", function (event) {
+    const projectsRef = collection(database, "projects");
+    const snapshot = await getDocs(projectsRef);
+    const newOrder = snapshot.size + 1;
+
     clearForm();
+
+    document.getElementById("product-order").textContent = newOrder;
 });
 
 document.getElementById("project-form").addEventListener("submit", function (event) {
@@ -65,7 +71,7 @@ function save() {
 
     const id = document.getElementById("project-id").textContent;
     const data = {
-        order: document.getElementById("project-order").value.trim(),
+        order: Number(document.getElementById("project-order").value.trim()) || 0,
         isActive: document.getElementById("project-isActive").checked,
         title: document.getElementById("project-title").value.trim(),
         description: document.getElementById("project-description").value.trim(),
