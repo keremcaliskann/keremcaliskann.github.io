@@ -65,6 +65,7 @@ function save() {
 
     const id = document.getElementById("project-id").textContent;
     const data = {
+        order: document.getElementById("project-order").value.trim(),
         isActive: document.getElementById("project-isActive").checked,
         title: document.getElementById("project-title").value.trim(),
         description: document.getElementById("project-description").value.trim(),
@@ -119,6 +120,7 @@ async function edit(id) {
             document.getElementById("project-title").value = project.title;
             document.getElementById("project-description").textContent = project.description;
             document.getElementById("project-link").value = project.link;
+            document.getElementById("project-order").value = project.order;
 
             project.images.forEach(img => {
                 addImageInput(img);

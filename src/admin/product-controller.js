@@ -65,6 +65,7 @@ function save() {
 
     const id = document.getElementById("product-id").textContent;
     const data = {
+        order: document.getElementById("product-order").value.trim(),
         isActive: document.getElementById("product-isActive").checked,
         title: document.getElementById("product-title").value.trim(),
         description: document.getElementById("product-description").value.trim(),
@@ -119,6 +120,7 @@ async function edit(id) {
             document.getElementById("product-title").value = product.title;
             document.getElementById("product-description").textContent = product.description;
             document.getElementById("product-price").value = product.price;
+            document.getElementById("product-order").value = product.order;
 
             product.images.forEach(img => {
                 addImageInput(img);
