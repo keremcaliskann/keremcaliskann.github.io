@@ -1,6 +1,8 @@
 import { database } from "/src/firebase-config.js";
 import { collection, getDocs, addDoc, getDoc, deleteDoc, doc, updateDoc } from "firebase/firestore";
 
+const lastOrder = 0;
+
 document.addEventListener("DOMContentLoaded", () => {
 
     // Tüm tıklamaları dinle (Event Delegation)
@@ -15,16 +17,17 @@ document.addEventListener("DOMContentLoaded", () => {
             edit(editButton.getAttribute("data-id"));
     });
 
+    checkSize();
 });
 
-document.getElementById("project-add").addEventListener("click", async function (event) {
+async function checkSize() {
     const projectsRef = collection(database, "projects");
     const snapshot = await getDocs(projectsRef);
-    const newOrder = snapshot.size + 1;
+    lastOrder = snapshot.size + 1;
+}
 
+document.getElementById("project-add").addEventListener("click", function (event) {
     clearForm();
-
-    document.getElementById("product-order").value = newOrder;
 });
 
 document.getElementById("project-form").addEventListener("submit", function (event) {
@@ -38,7 +41,7 @@ document.getElementById("project-add-image").addEventListener("click", function 
 
 function clearForm() {
     document.getElementById("project-form").reset();
-    document.getElementById("project-order").value = "-";
+    document.getElementById("project-order").value = lastOrder;
     document.getElementById("project-id").textContent = "-";
     document.getElementById("project-title").value = "";
     document.getElementById("project-description").value = "";

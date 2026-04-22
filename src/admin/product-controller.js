@@ -1,6 +1,8 @@
 import { database } from "/src/firebase-config.js";
 import { collection, getDocs, addDoc, getDoc, deleteDoc, doc, updateDoc } from "firebase/firestore";
 
+const lastOrder = 0;
+
 document.addEventListener("DOMContentLoaded", () => {
 
     // Tüm tıklamaları dinle (Event Delegation)
@@ -15,16 +17,17 @@ document.addEventListener("DOMContentLoaded", () => {
             edit(editButton.getAttribute("data-id"));
     });
 
+    checkSize();
 });
 
-document.getElementById("product-add").addEventListener("click", async function (event) {
-    const projectsRef = collection(database, "products");
-    const snapshot = await getDocs(projectsRef);
-    const newOrder = snapshot.size + 1;
+async function checkSize() {
+    const productsRef = collection(database, "products");
+    const snapshot = await getDocs(productsRef);
+    lastOrder = snapshot.size + 1;
+}
 
+document.getElementById("product-add").addEventListener("click", function (event) {
     clearForm();
-
-    document.getElementById("product-order").value = newOrder;
 });
 
 document.getElementById("product-form").addEventListener("submit", function (event) {
@@ -38,7 +41,7 @@ document.getElementById("product-add-image").addEventListener("click", function 
 
 function clearForm() {
     document.getElementById("product-form").reset();
-    document.getElementById("product-order").value = "-";
+    document.getElementById("product-order").value = lastOrder;
     document.getElementById("product-id").textContent = "-";
     document.getElementById("product-title").value = "";
     document.getElementById("product-description").value = "";
